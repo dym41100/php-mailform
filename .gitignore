@@ -1,0 +1,20 @@
+# OS / Editor
+.DS_Store
+*.swp
+*.swo
+*.bak
+.idea/
+.vscode/
+
+# Docker
+/storage/
+/tests/
+*.log
+/src/phpunit.xml
+
+# PHP
+/vendor/
+.env
+
+# Cache
+*.cache

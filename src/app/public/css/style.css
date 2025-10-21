@@ -1,0 +1,61 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 560px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-card:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.4rem;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.validation-error{
+  display: block;
+  margin-top: 0.3rem;
+  color: #e63946;
+  font-size: 0.875rem;
+}
+
+.form-control::placeholder {
+  color: #999;
+}
+
+.required.validation-error{
+  background-color: rgba(253, 109, 109, 0.5);
+}
+
+.required.validation-error:focus{
+  border-color: rgba(253, 109, 109, 0.5);
+  box-shadow: 0 0 5px 0 rgba(255,153,0,1);
+}

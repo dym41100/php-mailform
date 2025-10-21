@@ -1,0 +1,18 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "50080:80"
+    depends_on:
+      - mailhog
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: mailhog
+    ports:
+      - "1025:1025"  # SMTPポート（PHPが使う）
+      - "8025:8025"  # Web UIポート（ブラウザで見る用）
